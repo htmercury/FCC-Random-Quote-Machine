@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html lang="en" >
-
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Random Quote Machine</title>
-  
-  
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+    <meta charset="UTF-8">
+    <title>Random Quote Machine</title>
 
-  
-  
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
-
 <body>
+    <div id="main" class="wrapper">
+        <div class="grid-container">
+            <div id="content-output">
+                <img class="champion-img" src="http://res.cloudinary.com/htmercury/image/upload/v1513761245/splash/rammus_svg4ah.jpg">
+            </div>
+            <div id="content">
+                <div id="quote" class="content-item">
+                    <i class="fa fa-quote-left quote-sign"></i><p class="message">Ok.</p>
+                </div>
+                <div id="author" class="content-item">
+                    <p class="name">- Rammus</p>
+                </div>
+                <div id="content-btn">
+                    <div id="getMedia" class="content-item">
+                        <button type="button" class="primary-btn btn">Media</button>
+                    </div>
+                    <div id="quote-btn" class="content-item">
+                        <button type="button" id="getMessage" class="primary-btn btn">New Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
-  
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/index.js"></script>
 
-  
 
 </body>
-
 </html>
