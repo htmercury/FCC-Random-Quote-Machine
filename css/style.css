@@ -1,119 +1,165 @@
-html,body {
-  overflow: auto;
-  min-height: 100%;
+html,
+body {
+    overflow: auto;
+    height: 100%;
 }
 
+h1 {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: auto;
+    background-color: #343436;
+    border-radius: 20px;
+    color: #e7c364;
+}
+
+.label {
+    text-align: center;
+}
 
 body {
-  background-image: url("https://www.riotgames.com/sites/default/files/asset-kit-assets/Lissandra_howling_abyss_Freljord.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px 0;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: bottom-left;
+    background-repeat: no-repeat;
+    padding: 20px 0;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; 
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-container {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(225px, auto);
-  margin: 0 5%;
-  width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(225px, auto);
+    margin: 0 10%;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(31, 78, 75, 0.9);
+    border-radius: 10px;
+    max-width: 1440px;
 }
 
-#content-output {
-  grid-column: 1/4;
-  grid-row: 1/3;
-  grid-area: "image";
-  min-width: 450px;
-  display: flex;
+.content-output {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    min-width: 450px;
+    display: flex;
 }
 
-#content {
-  grid-column: 1/3;
-  grid-row: 2/3;
-  width: 460px;
-  height: auto;
-  background-color: #fcfcfc;
-  display: flex;
-  flex-direction: column;
-  padding: 40px 40px;
-  border-radius: 5px;
+.content {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 460px;
+    height: auto;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
+    border-radius: 5px;
+    color: #342224;
 }
 
 .champion-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    object-fit: contain;
 }
 
 .content-item {
-  font-size: 1em;
+    font-size: 1em;
 }
 
-#quote {
-  text-align: center;
-  width: 100%;
+.quote {
+    text-align: center;
+    width: 100%;
 }
 
-#quote > i {
-      font-size:1.3em;
-      margin-right: 0.4em;
-      color: grey;
+    .quote > i {
+        font-size: 1.6em;
+        margin-right: 0.4em;
     }
 
 .message {
-  display: inline;
-  font-size: 1.6em;
-  margin-bottom: 0;
+    display: inline;
+    font-size: 1.6em;
+    margin-bottom: 0;
 }
 
-#author {
-  padding-top: 20px;
-  margin-left: auto;
+.author {
+    padding-top: 20px;
+    margin-left: auto;
 }
 
-#content-btn {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  font-size: 0.8em;
-  margin-top: 20px;
+.content-btn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: 20px;
 }
 
-#media-btn {
-  align-self: flex-start;
+.btn-default {
+    color: #d6883e;
 }
 
-#quote-btn {
-  margin-left: auto;
+.media-btn {
+    align-self: flex-start;
 }
 
-@media screen and (max-width: 530px){
-        .grid-container{
-     margin: 0;
-        }
-  .champion-img {
-    padding: 0 10px;
-  }
+.quote-btn {
+    margin-left: auto;
+}
+
+.footer {
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+
+    .footer > a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #fff;
     }
 
-@media screen and (max-width: 1080px){
-  #content {
-  grid-column: 2/3;
-  grid-row: 3;
-  }
+@media screen and (max-width: 860px) {
+    .grid-container {
+        margin: 0;
+        background-color: transparent;
+        padding: 0;
     }
+
+    .champion-img {
+        padding: 20px;
+        border-radius: 25%;
+    }
+
+    h1 {
+        margin: 0;
+        margin-left: 20px;
+        top: 10%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .footer {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .content {
+        grid-column: 2/3;
+        grid-row: 3;
+    }
+}
